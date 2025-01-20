@@ -12,7 +12,7 @@ export default function Home() {
             <path d="M20 30C20 24.4772 24.4772 20 30 20" stroke="white"/>
           </svg>
           <h1 className="font-['Cormorant_Garamond'] text-4xl sm:text-5xl tracking-[0.2em] mb-3 uppercase">
-            L'eau de Lily
+            L&apos;eau de Lily
           </h1>
           <p className="text-xs tracking-[0.4em] uppercase text-white/60">
             Atelier Floral
@@ -39,7 +39,7 @@ export default function Home() {
       {/* Footer */}
       <div className="absolute bottom-8 left-0 right-0 text-center">
         <p className="text-xs tracking-[0.3em] uppercase text-white/40">
-          © 2024 L'eau de Lily
+          © 2024 L&apos;eau de Lily
         </p>
       </div>
     </div>
