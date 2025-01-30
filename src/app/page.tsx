@@ -30,6 +30,36 @@ export default function Home() {
         <CountdownTimer />
       </div>
 
+      {/* Galeria de Produtos */}
+      <div className="w-full max-w-6xl mx-auto mb-24">
+        <h2 className="text-center text-sm tracking-[0.3em] uppercase text-white/80 mb-12">
+          Nossas Coleções
+        </h2>
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-4 px-4">
+          {[
+            { name: 'Peônia', image: '/peonia.png' },
+            { name: 'Purity', image: '/purity.png' },
+            { name: 'Purple', image: '/purple.png' },
+            { name: 'Roses', image: '/roses.png' },
+            { name: 'Spring', image: '/spring.png' },
+            { name: 'White', image: '/white.png' },
+          ].map((product) => (
+            <div key={product.name} className="group relative aspect-square overflow-hidden">
+              <img
+                src={product.image}
+                alt={product.name}
+                className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-110"
+              />
+              <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                <p className="text-white text-sm tracking-[0.2em] uppercase">
+                  {product.name}
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
       {/* Elementos decorativos */}
       <div className="absolute inset-0 -z-10 overflow-hidden">
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1px] h-20 bg-gradient-to-b from-white/10 to-transparent"/>
