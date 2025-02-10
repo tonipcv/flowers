@@ -1,18 +1,30 @@
 import CountdownTimer from '@/components/CountdownTimer';
+import Image from 'next/image';
 
 export default function Home() {
+  const products = [
+    { name: 'Peônia', image: '/peonia.png', width: 800, height: 800 },
+    { name: 'Purity', image: '/purity.png', width: 800, height: 800 },
+    { name: 'Purple', image: '/purple.png', width: 800, height: 800 },
+    { name: 'Roses', image: '/roses.png', width: 800, height: 800 },
+    { name: 'Spring', image: '/spring.png', width: 800, height: 800 },
+    { name: 'White', image: '/white.png', width: 800, height: 800 },
+  ];
+
   return (
     <div className="relative min-h-screen bg-[#E7EDDE] text-[#545B4F] flex flex-col items-center justify-center p-8">
       {/* Logo e título */}
       <div className="text-center mb-16">
         <div className="mb-6">
-          <img 
-            src="/logo.webp" 
-            alt="Floralier Logo" 
-            width={60} 
-            height={60} 
-            className="mx-auto mb-8 object-contain"
-          />
+          <div className="relative w-[60px] h-[60px] mx-auto mb-8">
+            <Image 
+              src="/logo.webp" 
+              alt="Floralier Logo" 
+              fill
+              priority
+              className="object-contain"
+            />
+          </div>
           <h1 className="font-['Montserrat'] font-[200] text-4xl sm:text-5xl tracking-[0.2em] mb-3 uppercase">
             Floralier
           </h1>
@@ -38,18 +50,15 @@ export default function Home() {
           Nossas Coleções
         </h2>
         <div className="grid grid-cols-2 md:grid-cols-3 gap-4 px-4">
-          {[
-            { name: 'Peônia', image: '/peonia.png' },
-            { name: 'Purity', image: '/purity.png' },
-            { name: 'Purple', image: '/purple.png' },
-            { name: 'Roses', image: '/roses.png' },
-            { name: 'Spring', image: '/spring.png' },
-            { name: 'White', image: '/white.png' },
-          ].map((product) => (
+          {products.map((product) => (
             <div key={product.name} className="group relative aspect-square overflow-hidden">
-              <img
+              <Image
                 src={product.image}
                 alt={product.name}
+                width={product.width}
+                height={product.height}
+                quality={90}
+                priority={product.name === 'Peônia'}
                 className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-110"
               />
               <div className="absolute inset-0 bg-[#545B4F]/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">

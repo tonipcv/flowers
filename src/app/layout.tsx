@@ -20,14 +20,14 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
-  title: "Floralier - Floral Atelier",
+  title: "Floralier | Floral Atelier",
   description: "Floralier - Floral Atelier de alto padrão. Experiências florais únicas e sofisticadas para momentos especiais. Inauguração em 12 de abril de 2025.",
   keywords: ["floricultura", "flores", "arranjos florais", "buquês", "decoração", "eventos", "São Paulo", "luxo", "alto padrão"],
   authors: [{ name: "Floralier" }],
   openGraph: {
-    title: "Floralier - Floral Atelier",
+    title: "Floralier | Floral Atelier",
     description: "Experiências florais únicas e sofisticadas para momentos especiais",
-    url: "https://floralier.com.br",
+    url: "https://floralier.com",
     siteName: "Floralier",
     locale: "pt_BR",
     type: "website",
