@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import { Cormorant_Garamond } from 'next/font/google';
+import { Montserrat } from 'next/font/google';
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -13,22 +13,22 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-const cormorant = Cormorant_Garamond({
+const montserrat = Montserrat({
   subsets: ['latin'],
-  weight: ['300', '400', '500'],
-  variable: '--font-cormorant',
+  variable: '--font-montserrat',
+  weight: ['100', '200', '300', '400', '500'],
 });
 
 export const metadata: Metadata = {
-  title: "L'eau de Lily | Atelier Floral",
-  description: "L'eau de Lily - Atelier Floral de alto padrão. Experiências florais únicas e sofisticadas para momentos especiais. Inauguração em 12 de abril de 2025.",
+  title: "Floralier - Floral Atelier",
+  description: "Floralier - Floral Atelier de alto padrão. Experiências florais únicas e sofisticadas para momentos especiais. Inauguração em 12 de abril de 2025.",
   keywords: ["floricultura", "flores", "arranjos florais", "buquês", "decoração", "eventos", "São Paulo", "luxo", "alto padrão"],
-  authors: [{ name: "L'eau de Lily" }],
+  authors: [{ name: "Floralier" }],
   openGraph: {
-    title: "L'eau de Lily | Atelier Floral",
+    title: "Floralier - Floral Atelier",
     description: "Experiências florais únicas e sofisticadas para momentos especiais",
-    url: "https://leaudelily.com.br",
-    siteName: "L'eau de Lily",
+    url: "https://floralier.com.br",
+    siteName: "Floralier",
     locale: "pt_BR",
     type: "website",
   },
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     index: true,
     follow: true,
   },
-  themeColor: "#000000",
+  themeColor: "#E7EDDE",
   viewport: {
     width: "device-width",
     initialScale: 1,
@@ -51,7 +51,7 @@ export default function RootLayout({
   return (
     <html lang="pt-BR">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${cormorant.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${montserrat.variable} antialiased`}
       >
         {children}
       </body>

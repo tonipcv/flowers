@@ -38,36 +38,20 @@ export default function CountdownTimer() {
   return (
     <div className="grid grid-cols-4 gap-4 sm:gap-8">
       <div className="text-center">
-        <div className="bg-white/5 backdrop-blur-sm rounded-lg p-4 sm:p-6 mb-2">
-          <div className="font-['Cormorant_Garamond'] text-3xl sm:text-5xl font-light">
-            {timeLeft.days.toString().padStart(2, '0')}
-          </div>
-        </div>
-        <div className="text-[10px] sm:text-xs tracking-[0.3em] uppercase text-white/60">Dias</div>
+        <div className="text-4xl sm:text-5xl font-['Montserrat'] font-[100] [text-shadow:_0_0_1px_rgba(84,91,79,0.05)] mb-2 text-[#545B4F]/90">{timeLeft.days.toString().padStart(2, '0')}</div>
+        <div className="text-xs tracking-[0.2em] uppercase text-[#545B4F]/60">Dias</div>
       </div>
       <div className="text-center">
-        <div className="bg-white/5 backdrop-blur-sm rounded-lg p-4 sm:p-6 mb-2">
-          <div className="font-['Cormorant_Garamond'] text-3xl sm:text-5xl font-light">
-            {timeLeft.hours.toString().padStart(2, '0')}
-          </div>
-        </div>
-        <div className="text-[10px] sm:text-xs tracking-[0.3em] uppercase text-white/60">Horas</div>
+        <div className="text-4xl sm:text-5xl font-['Montserrat'] font-[100] [text-shadow:_0_0_1px_rgba(84,91,79,0.05)] mb-2 text-[#545B4F]/90">{timeLeft.hours.toString().padStart(2, '0')}</div>
+        <div className="text-xs tracking-[0.2em] uppercase text-[#545B4F]/60">Horas</div>
       </div>
       <div className="text-center">
-        <div className="bg-white/5 backdrop-blur-sm rounded-lg p-4 sm:p-6 mb-2">
-          <div className="font-['Cormorant_Garamond'] text-3xl sm:text-5xl font-light">
-            {timeLeft.minutes.toString().padStart(2, '0')}
-          </div>
-        </div>
-        <div className="text-[10px] sm:text-xs tracking-[0.3em] uppercase text-white/60">Minutos</div>
+        <div className="text-4xl sm:text-5xl font-['Montserrat'] font-[100] [text-shadow:_0_0_1px_rgba(84,91,79,0.05)] mb-2 text-[#545B4F]/90">{timeLeft.minutes.toString().padStart(2, '0')}</div>
+        <div className="text-xs tracking-[0.2em] uppercase text-[#545B4F]/60">Minutos</div>
       </div>
       <div className="text-center">
-        <div className="bg-white/5 backdrop-blur-sm rounded-lg p-4 sm:p-6 mb-2">
-          <div className="font-['Cormorant_Garamond'] text-3xl sm:text-5xl font-light">
-            {timeLeft.seconds.toString().padStart(2, '0')}
-          </div>
-        </div>
-        <div className="text-[10px] sm:text-xs tracking-[0.3em] uppercase text-white/60">Segundos</div>
+        <div className="text-4xl sm:text-5xl font-['Montserrat'] font-[100] [text-shadow:_0_0_1px_rgba(84,91,79,0.05)] mb-2 text-[#545B4F]/90">{timeLeft.seconds.toString().padStart(2, '0')}</div>
+        <div className="text-xs tracking-[0.2em] uppercase text-[#545B4F]/60">Segundos</div>
       </div>
     </div>
   );
